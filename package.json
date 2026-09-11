@@ -4,9 +4,9 @@
   "packageManager": "pnpm@10.11.0",
   "scripts": {
     "dev": "concurrently -k \"pnpm --filter @tpv/server dev\" \"pnpm --filter @tpv/web dev\"",
-    "build": "pnpm --filter @tpv/shared build && pnpm --filter @tpv/server build && pnpm --filter @tpv/web build",
+    "build": "DATABASE_URL=\"${DATABASE_URL:-postgresql://build:build@127.0.0.1:5432/build}\" pnpm db:generate && pnpm --filter @tpv/shared build && pnpm --filter @tpv/server build && pnpm --filter @tpv/web build",
     "build:web": "pnpm --filter @tpv/shared build && pnpm --filter @tpv/web build",
-    "build:server": "pnpm --filter @tpv/shared build && pnpm --filter @tpv/server db:generate && pnpm --filter @tpv/server build",
+    "build:server": "pnpm --filter @tpv/shared build && DATABASE_URL=\"${DATABASE_URL:-postgresql://build:build@127.0.0.1:5432/build}\" pnpm --filter @tpv/server db:generate && pnpm --filter @tpv/server build",
     "start": "pnpm --filter @tpv/web start",
     "start:web": "pnpm --filter @tpv/web start",
     "start:server": "pnpm --filter @tpv/server start",

@@ -1,0 +1,14 @@
+services:
+  server:
+    command: ["pnpm", "--filter", "@tpv/server", "dev"]
+    volumes:
+      - ./apps/server/src:/app/apps/server/src
+      - ./packages/shared/src:/app/packages/shared/src
+  web:
+    command: ["pnpm", "--filter", "@tpv/web", "dev"]
+    environment:
+      NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL:-http://localhost:3001}
+      WATCHPACK_POLLING: "true"
+    volumes:
+      - ./apps/web/src:/app/apps/web/src
+      - ./packages/shared/src:/app/packages/shared/src

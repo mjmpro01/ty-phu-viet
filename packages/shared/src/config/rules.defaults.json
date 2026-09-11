@@ -1,0 +1,20 @@
+{
+  "startingMoney": 15000000,
+  "passGoMoney": 2000000,
+  "jailFine": 500000,
+  "auctionsEnabled": true,
+  "turnDurationMs": 45000,
+  "auctionDurationMs": 15000,
+  "tradeTimeoutMs": 60000,
+  "reconnectGraceMs": 90000,
+  "mode": "LAST_STANDING",
+  "durationMs": 3600000,
+  "minBid": 100000,
+  "mortgageRatio": 0.5,
+  "redeemRatio": 1.1,
+  "sellBuildingRatio": 0.5,
+  "houseSupply": 32,
+  "hotelSupply": 12,
+  "rollingMs": 600,
+  "stepMs": 140
+}

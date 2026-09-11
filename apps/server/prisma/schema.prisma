@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+model User {
+  id String @id
+  name String
+  createdAt DateTime @default(now())
+  participants MatchParticipant[]
+}
+model Match {
+  id String @id
+  code String
+  rules Json
+  configHash String
+  status String
+  startedAt DateTime?
+  endedAt DateTime?
+  result Json?
+  participants MatchParticipant[]
+  events MatchEvent[]
+  dice DiceAudit[]
+  checkpoint MatchCheckpoint?
+}
+model MatchParticipant {
+  matchId String
+  userId String
+  seat Int
+  rank Int?
+  assets BigInt?
+  match Match @relation(fields: [matchId], references: [id])
+  user User @relation(fields: [userId], references: [id])
+  @@id([matchId, userId])
+}
+model MatchEvent {
+  matchId String
+  sequence Int
+  commandId String
+  actorId String
+  payload Json
+  createdAt DateTime @default(now())
+  match Match @relation(fields: [matchId], references: [id])
+  @@id([matchId, sequence])
+}
+model DiceAudit {
+  id String @id
+  matchId String
+  turnId String
+  die1 Int
+  die2 Int
+  createdAt DateTime
+  match Match @relation(fields: [matchId], references: [id])
+}
+model MatchCheckpoint {
+  matchId String @id
+  version Int
+  state Json
+  match Match @relation(fields: [matchId], references: [id])
+}

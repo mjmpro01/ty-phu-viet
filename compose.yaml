@@ -1,0 +1,72 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: tpv
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tpv_dev_password}
+      POSTGRES_DB: tpv
+    ports: ["127.0.0.1:5432:5432"]
+    volumes: ["postgres_data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tpv -d tpv"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7-alpine
+    command:
+      ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
+    ports: ["127.0.0.1:6379:6379"]
+    volumes: ["redis_data:/data"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  migrate:
+    build:
+      context: .
+      dockerfile: apps/server/Dockerfile
+    environment:
+      DATABASE_URL: postgresql://tpv:${POSTGRES_PASSWORD:-tpv_dev_password}@postgres:5432/tpv
+    command: ["pnpm", "--filter", "@tpv/server", "db:migrate"]
+    depends_on:
+      postgres: { condition: service_healthy }
+  server:
+    build:
+      context: .
+      dockerfile: apps/server/Dockerfile
+    ports: ["3001:3001"]
+    environment:
+      PORT: 3001
+      REDIS_URL: redis://redis:6379
+      DATABASE_URL: postgresql://tpv:${POSTGRES_PASSWORD:-tpv_dev_password}@postgres:5432/tpv
+      WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:3000}
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://localhost:3001/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+    restart: unless-stopped
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL:-http://localhost:3001}
+    ports: ["3000:3000"]
+    depends_on:
+      server: { condition: service_healthy }
+    restart: unless-stopped
+volumes:
+  postgres_data:
+  redis_data:

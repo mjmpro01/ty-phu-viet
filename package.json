@@ -1,0 +1,23 @@
+{
+  "name": "ty-phu-viet",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
+  "scripts": {
+    "dev": "concurrently -k \"pnpm --filter @tpv/server dev\" \"pnpm --filter @tpv/web dev\"",
+    "build": "pnpm --filter @tpv/shared build && pnpm --filter @tpv/server build && pnpm --filter @tpv/web build",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "pnpm --filter @tpv/server db:generate",
+    "db:migrate": "pnpm --filter @tpv/server db:migrate"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@vitest/coverage-v8": "3.2.4",
+    "vitest": "3.2.4",
+    "typescript": "^5.8.3",
+    "tsx": "^4.19.4",
+    "concurrently": "^9.1.2",
+    "socket.io-client": "^4.8.1"
+  }
+}

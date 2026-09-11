@@ -1,0 +1,392 @@
+[
+  {
+    "id": "0",
+    "position": 0,
+    "kind": "GO",
+    "name": "Xuất Phát",
+    "color": "#768390"
+  },
+  {
+    "id": "1",
+    "position": 1,
+    "kind": "LAND",
+    "name": "Hà Nội",
+    "color": "#d9485f",
+    "group": "north",
+    "price": 600000,
+    "buildCost": 500000,
+    "rents": [60000, 300000, 600000, 1200000, 1800000, 2400000]
+  },
+  {
+    "id": "2",
+    "position": 2,
+    "kind": "LAND",
+    "name": "Hạ Long",
+    "color": "#d9485f",
+    "group": "north",
+    "price": 700000,
+    "buildCost": 500000,
+    "rents": [70000, 350000, 700000, 1400000, 2100000, 2800000]
+  },
+  {
+    "id": "3",
+    "position": 3,
+    "kind": "CHANCE",
+    "name": "Cơ Hội",
+    "color": "#768390"
+  },
+  {
+    "id": "4",
+    "position": 4,
+    "kind": "LAND",
+    "name": "Sa Pa",
+    "color": "#d9485f",
+    "group": "north",
+    "price": 800000,
+    "buildCost": 500000,
+    "rents": [80000, 400000, 800000, 1600000, 2400000, 3200000]
+  },
+  {
+    "id": "5",
+    "position": 5,
+    "kind": "AIRPORT",
+    "name": "Nội Bài",
+    "color": "#768390",
+    "price": 2000000,
+    "rents": [250000, 500000, 1000000, 2000000]
+  },
+  {
+    "id": "6",
+    "position": 6,
+    "kind": "LAND",
+    "name": "Ninh Bình",
+    "color": "#ed8936",
+    "group": "heritage",
+    "price": 1000000,
+    "buildCost": 500000,
+    "rents": [100000, 500000, 1000000, 2000000, 3000000, 4000000]
+  },
+  {
+    "id": "7",
+    "position": 7,
+    "kind": "LAND",
+    "name": "Huế",
+    "color": "#ed8936",
+    "group": "heritage",
+    "price": 1100000,
+    "buildCost": 500000,
+    "rents": [110000, 550000, 1100000, 2200000, 3300000, 4400000]
+  },
+  {
+    "id": "8",
+    "position": 8,
+    "kind": "TAX",
+    "name": "Thuế thu nhập",
+    "color": "#768390",
+    "amount": 2000000
+  },
+  {
+    "id": "9",
+    "position": 9,
+    "kind": "LAND",
+    "name": "Quảng Bình",
+    "color": "#ed8936",
+    "group": "heritage",
+    "price": 1200000,
+    "buildCost": 500000,
+    "rents": [120000, 600000, 1200000, 2400000, 3600000, 4800000]
+  },
+  {
+    "id": "10",
+    "position": 10,
+    "kind": "JAIL",
+    "name": "Thăm tù",
+    "color": "#768390"
+  },
+  {
+    "id": "11",
+    "position": 11,
+    "kind": "LAND",
+    "name": "Hội An",
+    "color": "#eab308",
+    "group": "central",
+    "price": 1400000,
+    "buildCost": 1000000,
+    "rents": [140000, 700000, 1400000, 2800000, 4200000, 5600000]
+  },
+  {
+    "id": "12",
+    "position": 12,
+    "kind": "UTILITY",
+    "name": "Điện lực",
+    "color": "#768390",
+    "price": 1500000,
+    "rents": [40000, 100000]
+  },
+  {
+    "id": "13",
+    "position": 13,
+    "kind": "LAND",
+    "name": "Đà Nẵng",
+    "color": "#eab308",
+    "group": "central",
+    "price": 1500000,
+    "buildCost": 1000000,
+    "rents": [150000, 750000, 1500000, 3000000, 4500000, 6000000]
+  },
+  {
+    "id": "14",
+    "position": 14,
+    "kind": "LAND",
+    "name": "Quy Nhơn",
+    "color": "#eab308",
+    "group": "central",
+    "price": 1600000,
+    "buildCost": 1000000,
+    "rents": [160000, 800000, 1600000, 3200000, 4800000, 6400000]
+  },
+  {
+    "id": "15",
+    "position": 15,
+    "kind": "AIRPORT",
+    "name": "Phú Bài",
+    "color": "#768390",
+    "price": 2000000,
+    "rents": [250000, 500000, 1000000, 2000000]
+  },
+  {
+    "id": "16",
+    "position": 16,
+    "kind": "LAND",
+    "name": "Nha Trang",
+    "color": "#16a6b6",
+    "group": "coast",
+    "price": 1800000,
+    "buildCost": 1000000,
+    "rents": [180000, 900000, 1800000, 3600000, 5400000, 7200000]
+  },
+  {
+    "id": "17",
+    "position": 17,
+    "kind": "FORTUNE",
+    "name": "Khí Vận",
+    "color": "#768390"
+  },
+  {
+    "id": "18",
+    "position": 18,
+    "kind": "LAND",
+    "name": "Phan Thiết",
+    "color": "#16a6b6",
+    "group": "coast",
+    "price": 1900000,
+    "buildCost": 1000000,
+    "rents": [190000, 950000, 1900000, 3800000, 5700000, 7600000]
+  },
+  {
+    "id": "19",
+    "position": 19,
+    "kind": "LAND",
+    "name": "Vũng Tàu",
+    "color": "#16a6b6",
+    "group": "coast",
+    "price": 2000000,
+    "buildCost": 1000000,
+    "rents": [200000, 1000000, 2000000, 4000000, 6000000, 8000000]
+  },
+  {
+    "id": "20",
+    "position": 20,
+    "kind": "PARKING",
+    "name": "Bãi Đỗ Xe",
+    "color": "#768390"
+  },
+  {
+    "id": "21",
+    "position": 21,
+    "kind": "LAND",
+    "name": "Đà Lạt",
+    "color": "#57a34e",
+    "group": "highlands",
+    "price": 2200000,
+    "buildCost": 1500000,
+    "rents": [220000, 1100000, 2200000, 4400000, 6600000, 8800000]
+  },
+  {
+    "id": "22",
+    "position": 22,
+    "kind": "CHANCE",
+    "name": "Cơ Hội",
+    "color": "#768390"
+  },
+  {
+    "id": "23",
+    "position": 23,
+    "kind": "LAND",
+    "name": "Pleiku",
+    "color": "#57a34e",
+    "group": "highlands",
+    "price": 2300000,
+    "buildCost": 1500000,
+    "rents": [230000, 1150000, 2300000, 4600000, 6900000, 9200000]
+  },
+  {
+    "id": "24",
+    "position": 24,
+    "kind": "LAND",
+    "name": "Buôn Ma Thuột",
+    "color": "#57a34e",
+    "group": "highlands",
+    "price": 2400000,
+    "buildCost": 1500000,
+    "rents": [240000, 1200000, 2400000, 4800000, 7200000, 9600000]
+  },
+  {
+    "id": "25",
+    "position": 25,
+    "kind": "AIRPORT",
+    "name": "Cam Ranh",
+    "color": "#768390",
+    "price": 2000000,
+    "rents": [250000, 500000, 1000000, 2000000]
+  },
+  {
+    "id": "26",
+    "position": 26,
+    "kind": "LAND",
+    "name": "TP.HCM",
+    "color": "#7565cc",
+    "group": "south",
+    "price": 2600000,
+    "buildCost": 1500000,
+    "rents": [260000, 1300000, 2600000, 5200000, 7800000, 10400000]
+  },
+  {
+    "id": "27",
+    "position": 27,
+    "kind": "LAND",
+    "name": "Bình Dương",
+    "color": "#7565cc",
+    "group": "south",
+    "price": 2700000,
+    "buildCost": 1500000,
+    "rents": [270000, 1350000, 2700000, 5400000, 8100000, 10800000]
+  },
+  {
+    "id": "28",
+    "position": 28,
+    "kind": "UTILITY",
+    "name": "Cấp nước",
+    "color": "#768390",
+    "price": 1500000,
+    "rents": [40000, 100000]
+  },
+  {
+    "id": "29",
+    "position": 29,
+    "kind": "LAND",
+    "name": "Đồng Nai",
+    "color": "#7565cc",
+    "group": "south",
+    "price": 2800000,
+    "buildCost": 1500000,
+    "rents": [280000, 1400000, 2800000, 5600000, 8400000, 11200000]
+  },
+  {
+    "id": "30",
+    "position": 30,
+    "kind": "GO_TO_JAIL",
+    "name": "Đi Tù",
+    "color": "#768390"
+  },
+  {
+    "id": "31",
+    "position": 31,
+    "kind": "LAND",
+    "name": "Cần Thơ",
+    "color": "#df63a4",
+    "group": "mekong",
+    "price": 3000000,
+    "buildCost": 2000000,
+    "rents": [300000, 1500000, 3000000, 6000000, 9000000, 12000000]
+  },
+  {
+    "id": "32",
+    "position": 32,
+    "kind": "LAND",
+    "name": "Bến Tre",
+    "color": "#df63a4",
+    "group": "mekong",
+    "price": 3100000,
+    "buildCost": 2000000,
+    "rents": [310000, 1550000, 3100000, 6200000, 9300000, 12400000]
+  },
+  {
+    "id": "33",
+    "position": 33,
+    "kind": "FORTUNE",
+    "name": "Khí Vận",
+    "color": "#768390"
+  },
+  {
+    "id": "34",
+    "position": 34,
+    "kind": "LAND",
+    "name": "Châu Đốc",
+    "color": "#df63a4",
+    "group": "mekong",
+    "price": 3200000,
+    "buildCost": 2000000,
+    "rents": [320000, 1600000, 3200000, 6400000, 9600000, 12800000]
+  },
+  {
+    "id": "35",
+    "position": 35,
+    "kind": "AIRPORT",
+    "name": "Tân Sơn Nhất",
+    "color": "#768390",
+    "price": 2000000,
+    "rents": [250000, 500000, 1000000, 2000000]
+  },
+  {
+    "id": "36",
+    "position": 36,
+    "kind": "LAND",
+    "name": "Phú Quốc",
+    "color": "#2875c7",
+    "group": "islands",
+    "price": 3400000,
+    "buildCost": 2000000,
+    "rents": [340000, 1700000, 3400000, 6800000, 10200000, 13600000]
+  },
+  {
+    "id": "37",
+    "position": 37,
+    "kind": "LAND",
+    "name": "Côn Đảo",
+    "color": "#2875c7",
+    "group": "islands",
+    "price": 3500000,
+    "buildCost": 2000000,
+    "rents": [350000, 1750000, 3500000, 7000000, 10500000, 14000000]
+  },
+  {
+    "id": "38",
+    "position": 38,
+    "kind": "TAX",
+    "name": "Thuế tài sản",
+    "color": "#768390",
+    "amount": 1000000
+  },
+  {
+    "id": "39",
+    "position": 39,
+    "kind": "LAND",
+    "name": "Lý Sơn",
+    "color": "#2875c7",
+    "group": "islands",
+    "price": 3600000,
+    "buildCost": 2000000,
+    "rents": [360000, 1800000, 3600000, 7200000, 10800000, 14400000]
+  }
+]

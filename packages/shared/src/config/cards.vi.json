@@ -1,0 +1,86 @@
+[
+  {
+    "id": "CHANCE-0",
+    "deck": "CHANCE",
+    "kind": "CASH",
+    "value": 1000000,
+    "text": "Nhận thưởng kinh doanh"
+  },
+  {
+    "id": "CHANCE-1",
+    "deck": "CHANCE",
+    "kind": "CASH",
+    "value": -800000,
+    "text": "Chi phí sửa chữa"
+  },
+  {
+    "id": "CHANCE-2",
+    "deck": "CHANCE",
+    "kind": "MOVE",
+    "value": 0,
+    "text": "Tiến đến Xuất Phát"
+  },
+  {
+    "id": "CHANCE-3",
+    "deck": "CHANCE",
+    "kind": "JAIL",
+    "value": 0,
+    "text": "Đi tù"
+  },
+  {
+    "id": "CHANCE-4",
+    "deck": "CHANCE",
+    "kind": "GET_OUT",
+    "value": 0,
+    "text": "Thẻ ra tù"
+  },
+  {
+    "id": "CHANCE-5",
+    "deck": "CHANCE",
+    "kind": "CASH",
+    "value": 500000,
+    "text": "Hoàn thuế"
+  },
+  {
+    "id": "FORTUNE-0",
+    "deck": "FORTUNE",
+    "kind": "CASH",
+    "value": 1000000,
+    "text": "Nhận thưởng kinh doanh"
+  },
+  {
+    "id": "FORTUNE-1",
+    "deck": "FORTUNE",
+    "kind": "CASH",
+    "value": -800000,
+    "text": "Chi phí sửa chữa"
+  },
+  {
+    "id": "FORTUNE-2",
+    "deck": "FORTUNE",
+    "kind": "MOVE",
+    "value": 0,
+    "text": "Tiến đến Xuất Phát"
+  },
+  {
+    "id": "FORTUNE-3",
+    "deck": "FORTUNE",
+    "kind": "JAIL",
+    "value": 0,
+    "text": "Đi tù"
+  },
+  {
+    "id": "FORTUNE-4",
+    "deck": "FORTUNE",
+    "kind": "GET_OUT",
+    "value": 0,
+    "text": "Thẻ ra tù"
+  },
+  {
+    "id": "FORTUNE-5",
+    "deck": "FORTUNE",
+    "kind": "CASH",
+    "value": 500000,
+    "text": "Hoàn thuế"
+  }
+]

@@ -5,6 +5,11 @@
   "scripts": {
     "dev": "concurrently -k \"pnpm --filter @tpv/server dev\" \"pnpm --filter @tpv/web dev\"",
     "build": "pnpm --filter @tpv/shared build && pnpm --filter @tpv/server build && pnpm --filter @tpv/web build",
+    "build:web": "pnpm --filter @tpv/shared build && pnpm --filter @tpv/web build",
+    "build:server": "pnpm --filter @tpv/shared build && pnpm --filter @tpv/server db:generate && pnpm --filter @tpv/server build",
+    "start": "pnpm --filter @tpv/web start",
+    "start:web": "pnpm --filter @tpv/web start",
+    "start:server": "pnpm --filter @tpv/server start",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
